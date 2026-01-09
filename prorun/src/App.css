@@ -1,0 +1,269 @@
+/* ===================== Global Styles ===================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f3f6;
+  color: #333;
+}
+
+/* ===================== Navbar ===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f08528b5; /* Flipkart blue */
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar .brandname h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.navbar .searchbar {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar .searchbar input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar .searchbar input:focus {
+  box-shadow: 0 0 12px rgba(0,120,255,0.5);
+}
+
+.navbar .cart {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.navbar .cart:hover {
+  transform: scale(1.05);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ffd500;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* ===================== Navbar Filters ===================== */
+.navbar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-wrap > div {
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #f1f3f6;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar-wrap > div:hover {
+  background-color: #2878f0;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===================== Product Grid ===================== */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ===================== Product Card ===================== */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  width: 220px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+}
+
+.card-text {
+  font-size: 13px;
+  color: #555;
+  margin: 5px 0;
+  height: 38px;
+  overflow: hidden;
+}
+
+.btn-primary, .btn-warning {
+  margin: 5px 2px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2878f0;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1c5bcc;
+}
+
+.btn-warning {
+  background-color: #ffd500;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #e6c200;
+}
+
+/* ===================== Cart Page ===================== */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.cart-item-details h5 {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-item-details p {
+  margin: 3px 0;
+  color: #555;
+}
+
+.btn-danger {
+  background-color: #ff6161;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #e04e4e;
+}
+
+/* ===================== Checkout Button ===================== */
+.checkout-button {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 25px;
+  background-color: #2878f0;
+  color: white;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-button:hover {
+  transform: scale(1.05);
+  background-color: #1c5bcc;
+}
+
+/* ===================== Footer ===================== */
+footer {
+  background-color: #2878f0;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
